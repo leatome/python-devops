@@ -72,7 +72,7 @@ jobs:
       # Ici : fonctions de transformation, nettoyage, calculs KPI
       - name: Lancer tests unitaires
         run: |
-          pytest tests/unit
+          PYTHONPATH=$(pwd) pytest tests/unit
 
   # =====================================================
   # 3. TESTS D’INTÉGRATION (base de données + données)
