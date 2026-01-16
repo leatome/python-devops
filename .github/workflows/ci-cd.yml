@@ -104,7 +104,7 @@ jobs:
       # Objectif : tester les requêtes SQL, le schéma et les interactions réelles
       - name: Lancer tests d’intégration
         run: |
-          pytest tests/integration
+          PYTHONPATH=$(pwd) pytest tests/integration
 
   # =====================================================
   # 4. TESTS DE PERFORMANCE (simples)
