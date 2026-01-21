@@ -136,6 +136,7 @@ jobs:
       # Objectif : détecter des régressions de performance
       - name: Benchmarks légers
         run: |
+          export PYTHONPATH="${PYTHONPATH}:$(pwd)"
           pytest tests/performance --benchmark-only
 
   # =====================================================
